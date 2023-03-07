@@ -1,128 +1,106 @@
-button {
-    margin: 20px;
-    width: 300px;
-    height: 60px;
-    font-size: 2em;
+/* article {
+    height: 100vh;
+    display: grid;
+    gap: 2px; */
+    /* grid-auto-flow: column; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* align-items: center;
+    justify-items: center; */
     
-    animation-duration: 400ms;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-button:hover{
-    /* animation-name: btn ; */
-    /* animation-name: shake; */
-    animation-name: pulse;
-
-}
-
-@keyframes shake {
-    from{
-        transform: skew(5deg,5deg);
-
-    }to {
-        transform: skew(-1deg, -1deg);
-
-    }
-    
-}
-
-@keyframes pulse {
-    from{
-        scale: 0;
-
-    }to {
-        scale: 1;
-
-    }
-    
-}
-
-/* @keyframes something {
-    0%{
-
-    }10%{
-
-    }20%{
-
-    }50%{
-
-    }100%{
-
-    }0%{
-
-    }
-    
-} */
-
-
-@keyframes btn {
-    from{
-        scale: 1;
-
-
-    }to {
-        scale: 1.05;
-
-    }
-    
-}
-
-/* .box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: absolute; */
-    /* animation-name: sample;  Create Animation name */
-    /* animation-duration: 3s; set animation duration */
-    /* animation-iteration-count: 3;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-    animation-fill-mode: backwards; */
-}
-
-
-/*Create the key frame from to identifier is the animation name*/
-/* @keyframes box { */
-    /* from{
-        background-color: red;
-        scale: 1;
-        top: 0;
-        rotate: 0deg;
-
-    } 
-    to{
-        background-color: blue;
-        scale: 2;
-        top:500px;
-        rotate: 90deg;
-    } */
-/* 
-    0%{
-        top:0;
-        left: 0;
-
-    }100%{
-        top: 100px;
-        left: 100px;
-
-    } */
 /* } */
 
-/* @keyframes sample {
-    from{
-        translate: 0 0;
-        border-radius: 0;
-        background-color: red;
+/* p {
+    background-color: gold;
+} */
 
-    } 
-    to{
+body, 
+html {
+    height: 100%;
+}
 
-        translate: 400px 400px;
-        border-radius: 50%;
-        background-color: green;
+header, aside, main, footer {
+
+    /* place content in the center; */
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    display: grid;
+    place-items: center;
+    /* align-items: center;
+    justify-items: center; */
+
+    /* display: flex;
+    margin: auto; */
+}
+
+header {
+    background-color: pink;
+    grid-area: my-header;
+}
+
+aside {
+    background-color: green;
+    grid-area: my-aside;
+}
+
+main {
+    background-color: lightblue;
+    grid-area: my-main;
+}
+
+footer {
+    background-color: red;
+    grid-area: my-footer;
+}
+
+body {
+    display: grid;
+    gap: 2px;
+}
+   
+
+@media (min-width: 1800px){
+    body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 1fr 200px;
+        /*Defining template 2coloumns 3rows*/
+        grid-template-areas: 
+            "my-header my-header"
+            "my-aside my-main"
+            "my-footer my-footer"
+        ;
+    }
+
+}
+
+ @media (min-width:800px) and (max-width: 1800px) {
+    body{
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 100px 1fr 200px;
+        grid-template-areas:
+            "my-header my-header my-header"
+            "my-aside my-main my-main"
+            "my-footer my-footer my-footer"
+        ;
+        
 
     }
-    
-} */
+ }   
+
+ @media (max-width:800px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 2fr 200px;
+        grid-template-areas:
+            "my-header"
+            "my-aside"
+            "my-main"
+            "my-footer"
+        ;
+        
+    }
+ }
 
