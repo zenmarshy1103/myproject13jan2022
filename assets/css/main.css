@@ -17,6 +17,7 @@
 body, 
 html {
     height: 100%;
+    font-size: 2rem;
 }
 
 header, aside, main, footer {
@@ -80,10 +81,22 @@ body {
     body{
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 100px 1fr 200px;
-        grid-template-areas:
+        /* grid-template-areas:
             "my-header my-header my-header"
             "my-aside my-main my-main"
             "my-footer my-footer my-footer"
+        ; */
+
+        /* grid-template-areas:
+            "- my-header my-header"
+            "my-aside my-main my-main"
+            "my-footer my-footer my-footer"
+        ; */
+
+        grid-template-areas:
+            "my-aside my-header my-header"
+            "my-aside my-main my-main"
+            "my-footer my-main my-main"
         ;
         
 
@@ -100,7 +113,14 @@ body {
             "my-main"
             "my-footer"
         ;
-        
+
+        /* grid-template-areas:
+            "my-footer"
+            "my-main"
+            "my-header"
+            "my-aside"              
+        ;
+         */
     }
  }
 
