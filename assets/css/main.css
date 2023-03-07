@@ -1,3 +1,25 @@
 /* [data-text] {
     background-color: red;
 } */
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+
+}
+
+.circle:hover{
+    background-color: red;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
